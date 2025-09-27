@@ -7,17 +7,23 @@ const mywork_data = [
     {
         w_no:1,
         w_name: "Web design",
-        w_img:project1_img
+        w_img:project1_img,
+        w_desc: "A responsive website built using HTML, CSS, and JS.",
+        w_link: "https://tibute-page.vercel.app/"
     },
     {
         w_no:2,
         w_name: "Web design",
-        w_img:project2_img
+        w_img:project2_img,
+        w_desc: "An interactive React app with multiple components.",
+        w_link: "https://portfolio-website-qcul.vercel.app/"
     },
     {
         w_no:3,
         w_name: "Web design",
-        w_img:project3_img
+        w_img:project3_img,
+        w_desc: "A portfolio website showcasing UI/UX design.",
+        w_link: "https://example.com/project3"
     }
 ];
 

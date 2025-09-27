@@ -63,9 +63,9 @@
 }
 .about-achivement{
     display: flex;
-    flex-direction: column;
+    flex-direction: flex;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
     transition: 0.5s;
 }
 .about-achivement h1{
