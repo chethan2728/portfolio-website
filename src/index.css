@@ -1,15 +1,10 @@
-*{
-  margin: 0;
-  padding: 0;
-}
+
 body{
-  height: 100vh;
-  background: #161513;
-  color: white;
-}
-body{
-  height: 100vh;
+  height: 1000vh;
   background: black;
   color: white;
   font-family: 'outfit';
+
+  transform: scale(0.7);          /* Adjust zoom percentage (0.9 = 90%) */
+  transform-origin: top center;
 }
