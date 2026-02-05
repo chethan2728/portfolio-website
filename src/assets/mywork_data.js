@@ -6,10 +6,11 @@ import project3_img from '../assets/3.png' ;
 const mywork_data = [
     {
         w_no:1,
-        w_name: "Web design",
+        w_name: "Arogya",
         w_img:project1_img,
-        w_desc: "A responsive website built using HTML, CSS, and JS.",
-        w_link: "https://tibute-page.vercel.app/"
+        w_desc: "Latest work: a futuristic healthcare platform experience.",
+        w_link: "https://arogya-iota.vercel.app/",
+        w_featured: true
     },
     {
         w_no:2,

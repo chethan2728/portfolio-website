@@ -7,11 +7,14 @@ const About = () => {
   return (
     <div id='about' className='about'>
         <div className="about-title">
-            <h1>About me</h1>
+            <p className="section-title">About</p>
+            <h1>Building immersive web experiences</h1>
         </div>
         <div className="about-sections">
             <div className="about-left">
-                <img src={profile_img} alt="" />
+                <div className="about-image-frame">
+                    <img src={profile_img} alt="Chethan Kumar" />
+                </div>
             </div>
             <div className="about-right">
                 <div className="about-para">
@@ -20,30 +23,34 @@ const About = () => {
                 </div>
                 <div className="about-skills">
                     <div className="about-skill">
-                        <p>HTML&CSS</p><hr style={{width:"50%"}} />
+                        <p>HTML & CSS</p><hr style={{width:"55%"}} />
                     </div>
                     <div className="about-skill">
-                        <p>React JS</p><hr style={{width:"70%"}} />
+                        <p>React JS</p><hr style={{width:"75%"}} />
                     </div>
                     <div className="about-skill">
-                        <p>Java Script</p><hr style={{width:"60%"}} />
+                        <p>JavaScript</p><hr style={{width:"70%"}} />
                     </div>
                     <div className="about-skill">
-                        <p>Next JS</p><hr style={{width:"50%"}} />
+                        <p>Next JS</p><hr style={{width:"55%"}} />
                     </div>
                 </div>
             </div>
-            <div className="about-achivements">
-                <div className="about-achivement">
-                    <h1>FRESHER</h1>
-                    <p>YEARS OF EXPERIENCE</p>
-                </div>
-                <hr />
-                <div className="about-achivement">
-                    <h1>10+</h1>
-                    <p>PROJECTS COMPLETED</p>
-                </div>
-                <hr />
+        </div>
+        <div className="about-achievements">
+            <div className="about-achievement">
+                <h1>Fresher</h1>
+                <p>Years of experience</p>
+            </div>
+            <div className="about-divider"></div>
+            <div className="about-achievement">
+                <h1>10+</h1>
+                <p>Projects completed</p>
+            </div>
+            <div className="about-divider"></div>
+            <div className="about-achievement">
+                <h1>4+</h1>
+                <p>Core skill stacks</p>
             </div>
         </div>
     </div>

@@ -7,9 +7,13 @@ import resume from '../../assets/resume.pdf';
 const Hero = () => {
   return (
     <div id='home' className='hero'>
-        <img src={profile_img} alt="" />
-        <h1><span>I'm Chethan Kumar,</span> frontend developer based in Bengaluru,India.</h1>
-        <p>i'm Chethan Kumar and i like frontend development.I am still pursuing my bachelors degree in computer science and engineering from CMR University</p>
+        <div className="hero-visual">
+            <div className="hero-orbit"></div>
+            <div className="hero-orbit hero-orbit-secondary"></div>
+            <img src={profile_img} alt="Chethan Kumar" />
+        </div>
+        <h1><span>I'm Chethan Kumar,</span> frontend developer based in Bengaluru, India.</h1>
+        <p>I'm Chethan Kumar and I love frontend development. I'm currently pursuing my bachelor's degree in Computer Science and Engineering at CMR University.</p>
         <div className="hero-action">
             <div className="hero-connect"><AnchorLink className='anchor-link' offset={50} href='#contact'>Connect with me</AnchorLink></div>
             <div className="hero-resume">

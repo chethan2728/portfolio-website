@@ -1,13 +1,100 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-body{
-  height: 100vh;
-  background: black;
-  color: white;
-  font-family: 'outfit';
 
-  transform: scale(0.7);          /* Adjust zoom percentage (0.9 = 90%) */
-  transform-origin: top center;
+:root {
+  color-scheme: dark;
+  --bg-0: #05060a;
+  --bg-1: #0a0f1a;
+  --bg-2: #111827;
+  --text-0: #e6f0ff;
+  --text-1: #9fb2d3;
+  --accent-0: #4de1ff;
+  --accent-1: #8b7bff;
+  --accent-2: #ff7ad9;
+  --glass: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, rgba(77, 225, 255, 0.12), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(139, 123, 255, 0.18), transparent 35%),
+    radial-gradient(circle at 50% 80%, rgba(255, 122, 217, 0.12), transparent 40%),
+    linear-gradient(135deg, var(--bg-0), var(--bg-1) 45%, var(--bg-2));
+  color: var(--text-0);
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  background:
+    linear-gradient(transparent 24px, rgba(255, 255, 255, 0.04) 25px),
+    linear-gradient(90deg, transparent 24px, rgba(255, 255, 255, 0.04) 25px);
+  background-size: 26px 26px;
+  pointer-events: none;
+  opacity: 0.4;
+  transform: translateZ(0);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(77, 225, 255, 0.08), transparent 50%);
+  filter: blur(40px);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.anchor-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 14px;
+  color: var(--text-1);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slow-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

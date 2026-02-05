@@ -1,51 +1,73 @@
 .mywork {
-  text-align: center;
-  padding: 50px 20px;
+  padding: 80px clamp(24px, 8vw, 140px);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mywork-title h1 {
+  font-size: clamp(30px, 4vw, 54px);
+  margin-top: 10px;
 }
 
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  perspective: 1000px;
 }
 
 .project-card {
-  flex: 1 1 300px;
-  max-width: 350px;
-  border-radius: 15px;
+  position: relative;
+  border-radius: 18px;
   overflow: hidden;
-  background: #111;
-  color: white;
+  background: rgba(10, 14, 24, 0.8);
+  color: var(--text-0);
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-  padding: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transform-style: preserve-3d;
 }
 
 .project-card img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 14px;
+  transform: translateZ(15px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
 }
 
 .project-card h2 {
-  margin: 10px 0 5px;
-  font-size: 22px;
+  margin: 14px 0 6px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .project-card p {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-1);
 }
 
 .project-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+  transform: perspective(900px) translateY(-8px) rotateX(4deg);
+  box-shadow: 0 30px 60px rgba(77, 225, 255, 0.2);
+  border-color: rgba(77, 225, 255, 0.45);
 }
 
-@media (max-width: 768px) {
-  .projects {
-    flex-direction: column;
-    align-items: center;
-  }
+.project-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  background: rgba(77, 225, 255, 0.2);
+  border: 1px solid rgba(77, 225, 255, 0.5);
+}
+
+.project-featured {
+  border-color: rgba(77, 225, 255, 0.45);
 }

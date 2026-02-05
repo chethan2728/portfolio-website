@@ -1,6 +1,5 @@
 import React from 'react'
 import './Services.css'
-import theme_pattern from "../../assets/theme-pattern.svg";
 import Services_Data from "../../assets/services_data.js";
 import arrow_icon from "../../assets/arrow-theme.png";
 
@@ -9,8 +8,8 @@ const Services = () => {
   return (
     <div id='services' className='services'>
         <div className='services-title'>
-            <h1>My services</h1>
-            <img src={theme_pattern} alt="" style={{ width: '200px', height: '200px' }} />
+            <p className="section-title">Services</p>
+            <h1>Designing digital systems</h1>
         </div>
         <div className="services-container">
             {Services_Data.map((service,index)=>{
